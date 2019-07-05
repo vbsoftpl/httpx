@@ -1,8 +1,9 @@
-site_name: HTTP3
-site_description: The next generation HTTP client.
+site_name: Requests III
+site_description:  Requests is an elegant and simple HTTP library for Python, built for human beings.
 
 theme:
-    name: 'material'
+    name: 'alabaster'
+    custom_dir: 'docs-theme'
 
 repo_name: encode/http3
 repo_url: https://github.com/encode/http3
@@ -20,3 +21,11 @@ nav:
 markdown_extensions:
   - admonition
   - codehilite
+  - toc:
+      permalink: "¶"
+
+extra:
+  logo: img/requests-sidebar.png
+  logo_title: Requests
+  show_powered_by: False
+  homepage_nav: False
