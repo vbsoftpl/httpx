@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="The next generation HTTP client.">
+        <meta name="description" content="A next-generation HTTP client for Python.">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Async Client - HTTP3</title>
+        <title>Async Client - HTTPX</title>
       
     
     
@@ -88,7 +88,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="HTTP3" class="md-header-nav__button md-logo">
+        <a href=".." title="HTTPX" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -101,7 +101,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              HTTP3
+              HTTPX
             </span>
             <span class="md-header-nav__topic">
               
@@ -147,7 +147,7 @@
 
   
 
-<a href="https://github.com/encode/http3" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/encode/httpx" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -156,7 +156,7 @@
     </div>
   
   <div class="md-source__repository">
-    encode/http3
+    encode/httpx
   </div>
 </a>
           </div>
@@ -180,12 +180,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="HTTP3" class="md-nav__button md-logo">
+    <a href=".." title="HTTPX" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    HTTP3
+    HTTPX
   </label>
   
     <div class="md-nav__source">
@@ -194,7 +194,7 @@
 
   
 
-<a href="https://github.com/encode/http3" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/encode/httpx" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -203,7 +203,7 @@
     </div>
   
   <div class="md-source__repository">
-    encode/http3
+    encode/httpx
   </div>
 </a>
     </div>
@@ -391,7 +391,7 @@
                 
                 
                 <h1 id="async-client">Async Client</h1>
-<p>HTTP3 offers a standard synchronous API by default, but also gives you
+<p>HTTPX offers a standard synchronous API by default, but also gives you
 the option of an async client if you need it.</p>
 <p>Async is a concurrency model that is far more efficient than multi-threading,
 and can provide significant performance benefits and enable the use of
@@ -400,7 +400,7 @@ long-lived network connections such as WebSockets.</p>
 async client for sending outgoing HTTP requests.</p>
 <h2 id="making-async-requests">Making Async requests</h2>
 <p>To make asynchronous requests, you'll need an <code>AsyncClient</code>.</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">http3</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">httpx</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.example.com/&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -408,7 +408,7 @@ async client for sending outgoing HTTP requests.</p>
 <h2 id="api-differences">API Differences</h2>
 <p>If you're using streaming responses then there are a few bits of API that
 use async methods:</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">http3</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">httpx</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.example.com/&#39;</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="n">async</span> <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">stream</span><span class="p">():</span>
@@ -426,7 +426,7 @@ use async methods:</p>
 <li><code>.close()</code></li>
 </ul>
 <p>If you're making parallel requests, then you'll also need to use an async API:</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">http3</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">httpx</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">async</span> <span class="k">with</span> <span class="n">client</span><span class="o">.</span><span class="n">parallel</span><span class="p">()</span> <span class="k">as</span> <span class="n">parallel</span><span class="p">:</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="n">pending_one</span> <span class="o">=</span> <span class="n">parallel</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://example.com/1&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="n">pending_two</span> <span class="o">=</span> <span class="n">parallel</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://example.com/2&#39;</span><span class="p">)</span>

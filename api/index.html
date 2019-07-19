@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="The next generation HTTP client.">
+        <meta name="description" content="A next-generation HTTP client for Python.">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Developer Interface - HTTP3</title>
+        <title>Developer Interface - HTTPX</title>
       
     
     
@@ -88,7 +88,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="HTTP3" class="md-header-nav__button md-logo">
+        <a href=".." title="HTTPX" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -101,7 +101,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              HTTP3
+              HTTPX
             </span>
             <span class="md-header-nav__topic">
               
@@ -147,7 +147,7 @@
 
   
 
-<a href="https://github.com/encode/http3" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/encode/httpx" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -156,7 +156,7 @@
     </div>
   
   <div class="md-source__repository">
-    encode/http3
+    encode/httpx
   </div>
 </a>
           </div>
@@ -180,12 +180,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="HTTP3" class="md-nav__button md-logo">
+    <a href=".." title="HTTPX" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    HTTP3
+    HTTPX
   </label>
   
     <div class="md-nav__source">
@@ -194,7 +194,7 @@
 
   
 
-<a href="https://github.com/encode/http3" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/encode/httpx" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -203,7 +203,7 @@
     </div>
   
   <div class="md-source__repository">
-    encode/http3
+    encode/httpx
   </div>
 </a>
     </div>
@@ -488,7 +488,7 @@
 </ul>
 <h2 id="client"><code>Client</code></h2>
 <p><em>An HTTP client, with connection pooling, redirects, cookie persistence, etc.</em></p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">http3</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">httpx</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://example.org&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -533,7 +533,7 @@
 <h2 id="request"><code>Request</code></h2>
 <p><em>An HTTP request. Can be constructed explicitly for more control over exactly
 what gets sent over the wire.</em></p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">request</span> <span class="o">=</span> <span class="n">http3</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;host&#39;</span><span class="p">:</span> <span class="s1">&#39;example.org&#39;</span><span class="p">})</span>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">request</span> <span class="o">=</span> <span class="n">httpx</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;host&#39;</span><span class="p">:</span> <span class="s1">&#39;example.org&#39;</span><span class="p">})</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 </pre></div>
 

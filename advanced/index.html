@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="The next generation HTTP client.">
+        <meta name="description" content="A next-generation HTTP client for Python.">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Advanced Usage - HTTP3</title>
+        <title>Advanced Usage - HTTPX</title>
       
     
     
@@ -88,7 +88,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="HTTP3" class="md-header-nav__button md-logo">
+        <a href=".." title="HTTPX" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -101,7 +101,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              HTTP3
+              HTTPX
             </span>
             <span class="md-header-nav__topic">
               
@@ -147,7 +147,7 @@
 
   
 
-<a href="https://github.com/encode/http3" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/encode/httpx" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -156,7 +156,7 @@
     </div>
   
   <div class="md-source__repository">
-    encode/http3
+    encode/httpx
   </div>
 </a>
           </div>
@@ -180,12 +180,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="HTTP3" class="md-nav__button md-logo">
+    <a href=".." title="HTTPX" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    HTTP3
+    HTTPX
   </label>
   
     <div class="md-nav__source">
@@ -194,7 +194,7 @@
 
   
 
-<a href="https://github.com/encode/http3" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/encode/httpx" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -203,7 +203,7 @@
     </div>
   
   <div class="md-source__repository">
-    encode/http3
+    encode/httpx
   </div>
 </a>
     </div>
@@ -395,7 +395,7 @@
 <p>Using a Client instance to make requests will give you HTTP connection pooling,
 will provide cookie persistence, and allows you to apply configuration across
 all outgoing requests.</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">http3</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">httpx</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://example.org/&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">r</span>
 <span class="o">&lt;</span><span class="n">Response</span> <span class="p">[</span><span class="mi">200</span> <span class="n">OK</span><span class="p">]</span><span class="o">&gt;</span>
@@ -403,16 +403,16 @@ all outgoing requests.</p>
 
 
 <h2 id="calling-into-python-web-apps">Calling into Python Web Apps</h2>
-<p>You can configure an <code>http3</code> client to call directly into a Python web
+<p>You can configure an <code>httpx</code> client to call directly into a Python web
 application, using either the WSGI or ASGI protocol.</p>
 <p>This is particularly useful for two main use-cases:</p>
 <ul>
-<li>Using <code>http3</code> as a client, inside test cases.</li>
+<li>Using <code>httpx</code> as a client, inside test cases.</li>
 <li>Mocking out external services, during tests or in dev/staging environments.</li>
 </ul>
 <p>Here's an example of integrating against a Flask application:</p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
-<span class="kn">import</span> <span class="nn">http3</span>
+<span class="kn">import</span> <span class="nn">httpx</span>
 
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
@@ -421,7 +421,7 @@ application, using either the WSGI or ASGI protocol.</p>
 <span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
     <span class="k">return</span> <span class="s2">&quot;Hello World!&quot;</span>
 
-<span class="n">client</span> <span class="o">=</span> <span class="n">http3</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">app</span><span class="o">=</span><span class="n">app</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">httpx</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">app</span><span class="o">=</span><span class="n">app</span><span class="p">)</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://example/&#39;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
 <span class="k">assert</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="s2">&quot;Hello World!&quot;</span>

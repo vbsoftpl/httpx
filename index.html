@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="The next generation HTTP client.">
+        <meta name="description" content="A next-generation HTTP client for Python.">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>HTTP3</title>
+        <title>HTTPX</title>
       
     
     
@@ -88,7 +88,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="HTTP3" class="md-header-nav__button md-logo">
+        <a href="." title="HTTPX" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -101,7 +101,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              HTTP3
+              HTTPX
             </span>
             <span class="md-header-nav__topic">
               
@@ -147,7 +147,7 @@
 
   
 
-<a href="https://github.com/encode/http3" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/encode/httpx" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -156,7 +156,7 @@
     </div>
   
   <div class="md-source__repository">
-    encode/http3
+    encode/httpx
   </div>
 </a>
           </div>
@@ -180,12 +180,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="." title="HTTP3" class="md-nav__button md-logo">
+    <a href="." title="HTTPX" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    HTTP3
+    HTTPX
   </label>
   
     <div class="md-nav__source">
@@ -194,7 +194,7 @@
 
   
 
-<a href="https://github.com/encode/http3" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/encode/httpx" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -203,7 +203,7 @@
     </div>
   
   <div class="md-source__repository">
-    encode/http3
+    encode/httpx
   </div>
 </a>
     </div>
@@ -412,18 +412,31 @@
               
                 
                 
-                <h1 style="margin: 0">HTTP3</h1>
+                <p align="center" style="margin: 0 0 10px">
+  <img width="350" height="208" src="https://raw.githubusercontent.com/encode/httpx/master/docs/img/logo.jpg" alt='HTTPX'>
+</p>
 
-<p><a href="https://travis-ci.org/encode/http3">
-    <img src="https://travis-ci.org/encode/http3.svg?branch=master" alt="Build Status">
+<h1 align="center" style="font-size: 3rem; margin: -15px 0">
+HTTPX
+</h1>
+
+<hr />
+<div align="center">
+<p>
+<a href="https://travis-ci.org/encode/httpx">
+    <img src="https://travis-ci.org/encode/httpx.svg?branch=master" alt="Build Status">
 </a>
-<a href="https://codecov.io/gh/encode/http3">
-    <img src="https://codecov.io/gh/encode/http3/branch/master/graph/badge.svg" alt="Coverage">
+<a href="https://codecov.io/gh/encode/httpx">
+    <img src="https://codecov.io/gh/encode/httpx/branch/master/graph/badge.svg" alt="Coverage">
 </a>
-<a href="https://pypi.org/project/http3/">
-    <img src="https://badge.fury.io/py/http3.svg" alt="Package version">
-</a></p>
-<p>HTTP3 is a next-generation HTTP client for Python 3.</p>
+<a href="https://pypi.org/project/httpx/">
+    <img src="https://badge.fury.io/py/httpx.svg" alt="Package version">
+</a>
+</p>
+
+<em>A next-generation HTTP client for Python.</em>
+</div>
+
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This project should be considered as an "alpha" release. It is substantially
@@ -431,8 +444,8 @@ API complete, but there are still some areas that need more work.</p>
 </div>
 <hr />
 <p>Let's get started...</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">http3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">http3</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.example.org/&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">httpx</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">httpx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.example.org/&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">r</span>
 <span class="o">&lt;</span><span class="n">Response</span> <span class="p">[</span><span class="mi">200</span> <span class="n">OK</span><span class="p">]</span><span class="o">&gt;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
@@ -447,7 +460,7 @@ API complete, but there are still some areas that need more work.</p>
 
 
 <h2 id="features">Features</h2>
-<p>HTTP3 builds on the well-established usability of <code>requests</code>, and gives you:</p>
+<p>HTTPX builds on the well-established usability of <code>requests</code>, and gives you:</p>
 <ul>
 <li>A requests-compatible API.</li>
 <li>HTTP/2 and HTTP/1.1 support.</li>
@@ -483,7 +496,7 @@ the specific topics on making <a href="parallel/">Parallel Requests</a> or using
 <a href="async/">Async Client</a>.</p>
 <p>The <a href="api/">Developer Interface</a> provides a comprehensive API reference.</p>
 <h2 id="dependencies">Dependencies</h2>
-<p>The HTTP3 project relies on these excellent libraries:</p>
+<p>The HTTPX project relies on these excellent libraries:</p>
 <ul>
 <li><code>h2</code> - HTTP/2 support.</li>
 <li><code>h11</code> - HTTP/1.1 support.</li>
@@ -498,11 +511,11 @@ much of this work follows, as well as to <code>urllib3</code> for plenty of desi
 inspiration around the lower level networking details.</p>
 <h2 id="installation">Installation</h2>
 <p>Install with pip:</p>
-<div class="codehilite"><pre><span></span>$ pip install http3
+<div class="codehilite"><pre><span></span>$ pip install httpx
 </pre></div>
 
 
-<p>HTTP3 requires Python 3.6+</p>
+<p>HTTPX requires Python 3.6+</p>
                 
                   
                 
